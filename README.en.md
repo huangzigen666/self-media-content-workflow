@@ -19,16 +19,20 @@ A modular, tool-agnostic skill suite for social media content planning, research
 
 ## Install
 
+Use the official [skills CLI](https://github.com/vercel-labs/skills) (requires Node.js):
+
 ```bash
-git clone https://github.com/yanhua1010/self-media-content-workflow.git
-cd self-media-content-workflow
-python3 scripts/install.py
+# Install all 8 skills into the current project
+npx skills add yanhua1010/self-media-content-workflow
+
+# Install into the user-global skill directory
+npx skills add yanhua1010/self-media-content-workflow -g
 ```
 
-The default target is `${CODEX_HOME:-~/.codex}/skills`. For a project-local installation:
+Install a subset with `--skill <name>`, and target specific agents (Claude Code, Codex, Cursor, and more) with `-a`:
 
 ```bash
-python3 scripts/install.py --target /path/to/project/.agents/skills
+npx skills add yanhua1010/self-media-content-workflow --skill self-media-content-workflow -a claude-code
 ```
 
 ## Use

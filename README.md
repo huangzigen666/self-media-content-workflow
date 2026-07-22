@@ -43,23 +43,27 @@ self-media-content-workflow
 
 ## 安装
 
-### 安装到 Codex 用户目录
+使用官方 [skills CLI](https://github.com/vercel-labs/skills)（需要 Node.js）：
 
 ```bash
-git clone https://github.com/yanhua1010/self-media-content-workflow.git
-cd self-media-content-workflow
-python3 scripts/install.py
+# 安装全部 8 个 Skill 到当前项目
+npx skills add yanhua1010/self-media-content-workflow
+
+# 安装到用户全局目录
+npx skills add yanhua1010/self-media-content-workflow -g
 ```
 
-默认安装到 `${CODEX_HOME:-~/.codex}/skills`。
-
-### 安装到单个项目
+只安装部分模块：
 
 ```bash
-python3 scripts/install.py --target /path/to/project/.agents/skills
+npx skills add yanhua1010/self-media-content-workflow --skill self-media-content-workflow
 ```
 
-目标目录已有同名 Skill 时，安装器会停止。确认需要覆盖后使用 `--force`。
+CLI 支持 Claude Code、Codex、Cursor 等常见 Agent，用 `-a` 指定目标：
+
+```bash
+npx skills add yanhua1010/self-media-content-workflow -a claude-code -a codex
+```
 
 ## 使用
 
@@ -119,7 +123,6 @@ python3 scripts/validate.py
 
 ```text
 skills/                 # 8 个可独立安装的 Skill
-scripts/install.py      # 安装到用户或项目 Skill 目录
 scripts/validate.py     # 仓库校验
 .github/workflows/      # 持续集成
 ```

@@ -16,3 +16,28 @@ jobs:
         with:
           python-version: "3.12"
       - run: python3 scripts/validate.py
+
+  install:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - name: Install with the official skills CLI
+        run: npx --yes skills add . -a claude-code -g
+      - name: Verify installed skills
+        run: |
+          for name in \
+            self-media-content-workflow \
+            self-media-content-brief \
+            self-media-content-strategy \
+            self-media-trend-radar \
+            self-media-platform-copywriting \
+            self-media-short-video \
+            self-media-content-analytics \
+            self-media-content-delivery
+          do
+            test -f "$HOME/.claude/skills/$name/SKILL.md" || { echo "missing $name"; exit 1; }
+          done
+          echo "All 8 skills installed."
