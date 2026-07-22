@@ -29,6 +29,7 @@ description: 将已确认的母题、证据和创作简报写成平台原生内�
 - 小红书：[xiaohongshu.md](references/xiaohongshu.md)
 - 微信公众号：[wechat.md](references/wechat.md)
 - 视频号、抖音和小红书视频：[short-video-platforms.md](references/short-video-platforms.md)
+- 视觉风格库：[visual-styles.md](references/visual-styles.md)
 - 合规：[compliance.md](references/compliance.md)
 
 平台字符、图片尺寸、标题长度和标签限制可能变化。需要精确值时，以当前官方说明或发布界面为准，不把历史经验写成永久规则。
@@ -65,6 +66,7 @@ description: 将已确认的母题、证据和创作简报写成平台原生内�
 标题确认后再交付：
 
 - 摘要、标签、首评、链接或合集等适用字段。
+- 从 [visual-styles.md](references/visual-styles.md) 推荐 2 到 3 套配图风格并等待用户选择，账号已有稳定偏好时默认沿用。
 - 封面文字、视觉需求和最终素材映射。
 - 需要人工核对的事实。
 - 商业合作声明。
