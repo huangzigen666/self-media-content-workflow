@@ -1,0 +1,18 @@
+# Security policy
+
+## Supported version
+
+安全修复优先应用于最新版本。
+
+## Reporting
+
+请使用 GitHub Private Vulnerability Reporting 或 Security Advisory 私下报告安全问题。不要在公开 Issue 中提交 Cookie、Token、Secret、登录截图、用户数据或可复现的账号接管信息。
+
+## Security boundaries
+
+- 竞品研究默认只读，不使用创作者主账号登录态自动采集。
+- 不自动点赞、评论、关注、私信或群发。
+- 不绕过验证码、限流、付费墙或平台访问控制。
+- 不在 Skill、任务卡、日志和仓库保存完整凭证。
+- 外部写操作必须获得用户明确授权。
+- 平台风控、登录失效或权限异常出现时立即停止。
