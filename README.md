@@ -12,6 +12,7 @@
 - **平台原生** — 同一母题共享事实与证据，为每个平台分别设计标题、开头、结构和行动
 - **人工在环** — 方向、平台、标题、终稿、发布授权五个强制确认点，默认只产出草稿或发布包，从不自动群发
 - **证据优先** — 关键数字必须有来源，区分事实、判断、推断与建议，不编造数据、体验和收益
+- **视觉体系化** — 内置 8 套配图风格预设与平台路由，先选风格再出图，同组不混用，账号偏好优先于预设默认值
 
 ## 架构
 
@@ -33,7 +34,7 @@ graph TD
 | [`self-media-content-brief`](skills/self-media-content-brief/SKILL.md) | 澄清目标、受众、证据、角度和约束 |
 | [`self-media-content-strategy`](skills/self-media-content-strategy/SKILL.md) | 账号定位、内容配比、栏目、选题池和内容日历 |
 | [`self-media-trend-radar`](skills/self-media-trend-radar/SKILL.md) | 热点追踪、关键词研究、竞品拆解和原创选题 |
-| [`self-media-platform-copywriting`](skills/self-media-platform-copywriting/SKILL.md) | X、小红书、公众号和短视频平台原生文案 |
+| [`self-media-platform-copywriting`](skills/self-media-platform-copywriting/SKILL.md) | X、小红书、公众号和短视频平台原生文案，含配图风格库 |
 | [`self-media-short-video`](skills/self-media-short-video/SKILL.md) | 钩子、口播、分镜、字幕和拍摄方案 |
 | [`self-media-content-analytics`](skills/self-media-content-analytics/SKILL.md) | 数据质量、基线比较、归因、决策和实验 |
 | [`self-media-content-delivery`](skills/self-media-content-delivery/SKILL.md) | 里程碑保存、版本、路径核验和完整发布包 |
@@ -87,6 +88,8 @@ npx skills add yanhua1010/self-media-content-workflow --skill self-media-content
 ```
 
 `*` 为强制人工确认点。终稿确认不等于发布授权：Skill 默认只创建草稿或手动发布包，不直接群发。
+
+素材生成前，工作流从[配图风格库](skills/self-media-platform-copywriting/references/visual-styles.md)按内容类型和平台推荐 2 到 3 套风格供选择，账号已有稳定偏好时直接沿用。
 
 ## 安全边界
 

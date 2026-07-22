@@ -12,6 +12,7 @@ A modular, tool-agnostic suite of agent skills for social-media content operatio
 - **Platform-native** — one topic shares facts and evidence, while titles, openings, structure, and calls to action are designed per platform
 - **Human-in-the-loop** — five mandatory approval gates (direction, platforms, title, final copy, publishing); drafts and publishing packages by default, never automatic broadcasting
 - **Evidence-first** — every key number needs a source; facts, opinions, inferences, and advice stay separated; no fabricated data, experience, or results
+- **Systematic visuals** — eight built-in image-style presets with platform routing; a style is chosen before generation, one style per image set, and account preferences override preset defaults
 
 ## Architecture
 
@@ -33,7 +34,7 @@ graph TD
 | [`self-media-content-brief`](skills/self-media-content-brief/SKILL.md) | Audience, goal, evidence, angle, tone, and constraints |
 | [`self-media-content-strategy`](skills/self-media-content-strategy/SKILL.md) | Positioning, content mix, series, topic pool, and calendar |
 | [`self-media-trend-radar`](skills/self-media-trend-radar/SKILL.md) | Trend tracking, keyword research, competitor teardowns, and original topics |
-| [`self-media-platform-copywriting`](skills/self-media-platform-copywriting/SKILL.md) | Native copy for X, Xiaohongshu, WeChat, and short-video platforms |
+| [`self-media-platform-copywriting`](skills/self-media-platform-copywriting/SKILL.md) | Native copy for X, Xiaohongshu, WeChat, and short-video platforms, plus the visual style library |
 | [`self-media-short-video`](skills/self-media-short-video/SKILL.md) | Hooks, spoken script, storyboard, captions, and shoot plan |
 | [`self-media-content-analytics`](skills/self-media-content-analytics/SKILL.md) | Data quality, comparable baselines, attribution, decisions, and experiments |
 | [`self-media-content-delivery`](skills/self-media-content-delivery/SKILL.md) | Milestone files, versions, path verification, and publishing packages |
@@ -87,6 +88,8 @@ Clarify → Direction approval* → Research & evidence → Platform approval* �
 ```
 
 `*` marks a mandatory human approval gate. Final-copy approval is not publishing authorization: skills create drafts or manual publishing packages by default and never broadcast.
+
+Before assets are generated, the workflow recommends 2-3 styles from the [visual style library](skills/self-media-platform-copywriting/references/visual-styles.md) based on content type and platform, or reuses the account's established preference.
 
 ## Safety boundaries
 
