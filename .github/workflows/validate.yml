@@ -25,7 +25,7 @@ jobs:
         with:
           node-version: "22"
       - name: Install with the official skills CLI
-        run: npx --yes skills add . -a claude-code -g
+        run: npx --yes skills add . -a claude-code -g -y
       - name: Verify installed skills
         run: |
           for name in \
