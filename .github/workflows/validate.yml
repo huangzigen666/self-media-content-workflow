@@ -36,7 +36,8 @@ jobs:
             self-media-platform-copywriting \
             self-media-short-video \
             self-media-content-analytics \
-            self-media-content-delivery
+            self-media-content-delivery \
+            self-media-wechat-publisher
           do
             test -f "$HOME/.claude/skills/$name/SKILL.md" || { echo "missing $name"; exit 1; }
           done

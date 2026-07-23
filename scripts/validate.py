@@ -85,6 +85,7 @@ def validate_links() -> list[str]:
         if any(part.startswith(".") or part == "__pycache__" for part in relative_parts):
             continue
         text = path.read_text(encoding="utf-8")
+        text = re.sub(r"```.*?```", "", text, flags=re.DOTALL)
         for target in LINK_RE.findall(text):
             target = unquote(target.strip())
             if target.startswith(("http://", "https://", "mailto:", "#")):

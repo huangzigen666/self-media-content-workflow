@@ -6,7 +6,7 @@
 
 **简体中文** | [English](README.en.md)
 
-一套通用、模块化的自媒体内容生产与经营 Agent Skills：从模糊需求到创作简报、账号策略、热点与竞品研究、平台原生文案、短视频方案、数据复盘和交付归档，覆盖内容生产的完整闭环。
+一套通用、模块化的自媒体内容生产与经营 Agent Skills：从模糊需求到创作简报、账号策略、热点与竞品研究、平台原生文案、短视频方案、公众号排版发布、数据复盘和交付归档，覆盖内容生产的完整闭环。
 
 - **工具无关** — 不绑定特定模型、浏览器、图片、视频、发布或数据服务，运行时自动发现当前环境的可用能力
 - **平台原生** — 同一母题共享事实与证据，为每个平台分别设计标题、开头、结构和行动
@@ -26,6 +26,7 @@ graph TD
     W --> V["short-video<br/>短视频"]
     W --> A["content-analytics<br/>数据复盘"]
     W --> D["content-delivery<br/>交付归档"]
+    W --> P["wechat-publisher<br/>公众号发布"]
 ```
 
 | Skill | 职责 |
@@ -38,6 +39,7 @@ graph TD
 | [`self-media-short-video`](skills/self-media-short-video/SKILL.md) | 钩子、口播、分镜、字幕和拍摄方案 |
 | [`self-media-content-analytics`](skills/self-media-content-analytics/SKILL.md) | 数据质量、基线比较、归因、决策和实验 |
 | [`self-media-content-delivery`](skills/self-media-content-delivery/SKILL.md) | 里程碑保存、版本、路径核验和完整发布包 |
+| [`self-media-wechat-publisher`](skills/self-media-wechat-publisher/SKILL.md) | 公众号排版、图片上传、草稿箱写入和小绿书图片消息 |
 
 ## 快速开始
 
@@ -46,7 +48,7 @@ graph TD
 使用官方 [skills CLI](https://github.com/vercel-labs/skills)（需要 Node.js）：
 
 ```bash
-# 安装全部 8 个 Skill 到当前项目
+# 安装全部 9 个 Skill 到当前项目
 npx skills add yanhua1010/self-media-content-workflow
 
 # 安装到用户全局目录
@@ -113,7 +115,7 @@ python3 scripts/validate.py
 ## 仓库结构
 
 ```text
-skills/                   # 8 个可独立安装的 Skill
+skills/                   # 9 个可独立安装的 Skill
 ├── <skill>/SKILL.md      #   核心流程（≤ 500 行）
 ├── <skill>/references/   #   平台细则与详细规范
 └── <skill>/assets/       #   可复制的输出模板
@@ -123,7 +125,7 @@ scripts/validate.py       # 仓库结构校验
 
 ## 设计取舍
 
-- 一个总控负责路由与状态，七个模块各承担单一职责
+- 一个总控负责路由与状态，八个模块各承担单一职责
 - 采集和发布作为运行时适配层，不绑定厂商实现
 - 多平台共享事实与证据，但分别重写标题、开头、结构和行动
 - 平台限制可能变化，需要精确值时以官方说明或发布界面为准

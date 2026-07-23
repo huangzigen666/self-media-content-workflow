@@ -44,6 +44,7 @@ description: 通用自媒体内容生产与经营工作流。用于自媒体内�
 | 口播、分镜、字幕、拍摄方案 | `self-media-short-video` | 可拍摄短视频包 |
 | 单篇、周度或月度数据复盘 | `self-media-content-analytics` | 归因、决策和待验证实验 |
 | 保存、版本、发布包和归档 | `self-media-content-delivery` | 已核验文件和内容索引 |
+| 公众号排版、草稿箱写入、小绿书图片消息 | `self-media-wechat-publisher` | 已排版并核对的公众号草稿 |
 
 使用子 Skill 前完整读取其 `SKILL.md`。某个模块未安装时，按本 Skill 的同名阶段执行最小流程，不虚构不存在的能力。
 
@@ -126,7 +127,7 @@ description: 通用自媒体内容生产与经营工作流。用于自媒体内�
 
 调用 `self-media-content-delivery` 保存里程碑产物并回读验证。只向用户报告已确认存在且非空的文件。
 
-完整读取 [publishing-and-review.md](references/publishing-and-review.md)。公众号等支持草稿的平台可在用户授权后创建草稿，但不直接群发。其他平台默认交付手动发布包。
+完整读取 [publishing-and-review.md](references/publishing-and-review.md)。公众号草稿在用户授权后优先调用 `self-media-wechat-publisher` 排版并写入草稿箱；该模块或其依赖不可用时交付手动发布包。任何平台都不直接群发。
 
 ### 8. 数据复盘和风格学习
 

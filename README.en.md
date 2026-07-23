@@ -6,7 +6,7 @@
 
 [简体中文](README.md) | **English**
 
-A modular, tool-agnostic suite of agent skills for social-media content operations: from a vague idea to a confirmed brief, account strategy, trend and competitor research, platform-native copy, short-video packages, performance reviews, and verified delivery — the full content loop.
+A modular, tool-agnostic suite of agent skills for social-media content operations: from a vague idea to a confirmed brief, account strategy, trend and competitor research, platform-native copy, short-video packages, WeChat draft publishing, performance reviews, and verified delivery — the full content loop.
 
 - **Tool-agnostic** — no binding to a specific model, browser, image, video, publishing, or analytics service; capabilities are discovered from the running environment
 - **Platform-native** — one topic shares facts and evidence, while titles, openings, structure, and calls to action are designed per platform
@@ -26,6 +26,7 @@ graph TD
     W --> V["short-video<br/>Short video"]
     W --> A["content-analytics<br/>Analytics"]
     W --> D["content-delivery<br/>Delivery"]
+    W --> P["wechat-publisher<br/>WeChat publishing"]
 ```
 
 | Skill | Responsibility |
@@ -38,6 +39,7 @@ graph TD
 | [`self-media-short-video`](skills/self-media-short-video/SKILL.md) | Hooks, spoken script, storyboard, captions, and shoot plan |
 | [`self-media-content-analytics`](skills/self-media-content-analytics/SKILL.md) | Data quality, comparable baselines, attribution, decisions, and experiments |
 | [`self-media-content-delivery`](skills/self-media-content-delivery/SKILL.md) | Milestone files, versions, path verification, and publishing packages |
+| [`self-media-wechat-publisher`](skills/self-media-wechat-publisher/SKILL.md) | WeChat formatting, image upload, draft creation, and image-message posts |
 
 ## Quick start
 
@@ -46,7 +48,7 @@ graph TD
 Use the official [skills CLI](https://github.com/vercel-labs/skills) (requires Node.js):
 
 ```bash
-# Install all 8 skills into the current project
+# Install all 9 skills into the current project
 npx skills add yanhua1010/self-media-content-workflow
 
 # Install into the user-global skill directory
@@ -113,7 +115,7 @@ The validator checks skill frontmatter, directory consistency, core-file length,
 ## Repository layout
 
 ```text
-skills/                   # 8 independently installable skills
+skills/                   # 9 independently installable skills
 ├── <skill>/SKILL.md      #   core workflow (≤ 500 lines)
 ├── <skill>/references/   #   detailed platform guidance
 └── <skill>/assets/       #   copyable output templates
@@ -123,7 +125,7 @@ scripts/validate.py       # repository validation
 
 ## Design decisions
 
-- One orchestrator owns routing and state; seven modules each own a single responsibility
+- One orchestrator owns routing and state; eight modules each own a single responsibility
 - Collection and publishing are runtime adapter layers, never vendor-bound
 - Platforms share facts and evidence while titles, openings, structure, and actions are rewritten per platform
 - Platform limits change; exact values defer to official documentation or the publishing interface
