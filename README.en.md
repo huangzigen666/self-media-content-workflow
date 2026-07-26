@@ -45,6 +45,20 @@ graph TD
 
 ### Install
 
+**Claude Code (recommended, no Node.js required)**
+
+Run these two commands inside Claude Code to install all 9 skills at once:
+
+```text
+/plugin marketplace add yanhua1010/self-media-content-workflow
+```
+
+```text
+/plugin install self-media-suite@self-media
+```
+
+**Other agents (Codex, Cursor, and more)**
+
 Use the official [skills CLI](https://github.com/vercel-labs/skills) (requires Node.js):
 
 ```bash
@@ -55,7 +69,7 @@ npx skills add yanhua1010/self-media-content-workflow
 npx skills add yanhua1010/self-media-content-workflow -g
 ```
 
-Install a subset with `--skill <name>`, and target specific agents (Claude Code, Codex, Cursor, and more) with `-a`:
+Install a subset with `--skill <name>`, and target specific agents with `-a`:
 
 ```bash
 npx skills add yanhua1010/self-media-content-workflow --skill self-media-content-workflow -a claude-code
@@ -120,6 +134,7 @@ skills/                   # 9 independently installable skills
 ├── <skill>/references/   #   detailed platform guidance
 └── <skill>/assets/       #   copyable output templates
 scripts/validate.py       # repository validation
+.claude-plugin/           # Claude Code plugin and marketplace manifests
 .github/workflows/        # structural validation + install test
 ```
 

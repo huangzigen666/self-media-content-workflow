@@ -45,6 +45,20 @@ graph TD
 
 ### 安装
 
+**Claude Code 用户（推荐，无需 Node.js）**
+
+在 Claude Code 中依次执行两条命令，一次装齐全部 9 个 Skill：
+
+```text
+/plugin marketplace add yanhua1010/self-media-content-workflow
+```
+
+```text
+/plugin install self-media-suite@self-media
+```
+
+**其他 Agent（Codex、Cursor 等）**
+
 使用官方 [skills CLI](https://github.com/vercel-labs/skills)（需要 Node.js）：
 
 ```bash
@@ -55,7 +69,7 @@ npx skills add yanhua1010/self-media-content-workflow
 npx skills add yanhua1010/self-media-content-workflow -g
 ```
 
-按需选装模块，或用 `-a` 指定目标 Agent（支持 Claude Code、Codex、Cursor 等）：
+按需选装模块，或用 `-a` 指定目标 Agent：
 
 ```bash
 npx skills add yanhua1010/self-media-content-workflow --skill self-media-content-workflow -a claude-code
@@ -120,6 +134,7 @@ skills/                   # 9 个可独立安装的 Skill
 ├── <skill>/references/   #   平台细则与详细规范
 └── <skill>/assets/       #   可复制的输出模板
 scripts/validate.py       # 仓库结构校验
+.claude-plugin/           # Claude Code plugin 与 marketplace 清单
 .github/workflows/        # 结构校验 + 安装测试
 ```
 
