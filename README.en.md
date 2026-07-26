@@ -134,6 +134,16 @@ scripts/validate.py       # repository validation
 
 Issues and pull requests are welcome. Read [CONTRIBUTING.md](CONTRIBUTING.md) and run `python3 scripts/validate.py` before submitting. See [CHANGELOG.md](CHANGELOG.md) for release history.
 
+## Disclaimer
+
+This project is a content-creation assistance Skill suite, provided "as is" without warranty of any kind, express or implied. Before using it:
+
+- **Official platform rules prevail.** Platform conventions, publishing flows, and operational advice in this repository reflect experience at the time of writing, and platform rules can change at any time. When an exact value matters, defer to official announcements and the current publishing interface.
+- **Account operations are at your own risk.** This project performs real account operations, such as writing WeChat Official Account drafts. The author is not liable for rate limiting, account suspension, content removal, data loss, or any other damages arising from use of this project.
+- **You control your own credentials.** This project does not collect, transmit, or store credentials. Secrets such as `WECHAT_APP_ID` and `WECHAT_APP_SECRET` are supplied only through your local environment variables — never write them into any file that could be committed or shared.
+- **Content compliance is the publisher's responsibility.** The compliance checklists here are not legal advice. Whether your published content complies with applicable advertising and content laws, and with each platform's community guidelines, is yours to judge and to answer for.
+- **No results are guaranteed.** This project makes no promise regarding reach, follower growth, conversion, or revenue.
+
 ## License
 
 [MIT](LICENSE)

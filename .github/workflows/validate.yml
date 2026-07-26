@@ -25,7 +25,7 @@ jobs:
         with:
           node-version: "22"
       - name: Install with the official skills CLI
-        run: npx --yes skills add . -a claude-code -g -y
+        run: npx --yes skills@1.5.20 add . -a claude-code -g -y
       - name: Verify installed skills
         run: |
           for name in \
@@ -41,4 +41,4 @@ jobs:
           do
             test -f "$HOME/.claude/skills/$name/SKILL.md" || { echo "missing $name"; exit 1; }
           done
-          echo "All 8 skills installed."
+          echo "All 9 skills installed."
