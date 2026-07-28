@@ -11,7 +11,7 @@
       "name": "self-media-suite",
       "source": "./",
       "displayName": "自媒体内容工作流",
-      "description": "九个 Skill 覆盖内容生产闭环：创作简报、账号策略、热点与竞品研究、平台原生文案、短视频方案、公众号排版发布、数据复盘和交付归档，由总控 Skill 编排。",
+      "description": "十一个 Skill 覆盖内容生产闭环：创作简报、账号策略、热点与竞品研究、平台原生文案、短视频方案、公众号日更与排版发布、头条号日更、数据复盘和交付归档，由总控 Skill 编排。",
       "version": "0.1.0",
       "author": {
         "name": "yanhua",

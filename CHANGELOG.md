@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file.
 
+## Unreleased
+
+### Features
+
+- Add a data-informed WeChat daily workflow with information-gain gates, low-creativity checks, review templates, and a deterministic package validator.
+
 ## 0.1.0 - 2026-07-22
 
 ### Features

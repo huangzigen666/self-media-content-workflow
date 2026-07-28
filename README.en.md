@@ -6,7 +6,7 @@
 
 [简体中文](README.md) | **English**
 
-A modular, tool-agnostic suite of agent skills for social-media content operations: from a vague idea to a confirmed brief, account strategy, trend and competitor research, platform-native copy, short-video packages, WeChat draft publishing, daily Toutiao operations, performance reviews, and verified delivery — the full content loop.
+A modular, tool-agnostic suite of agent skills for social-media content operations: from a vague idea to a confirmed brief, account strategy, trend and competitor research, platform-native copy, short-video packages, daily WeChat production and draft publishing, daily Toutiao operations, performance reviews, and verified delivery — the full content loop.
 
 - **Tool-agnostic** — no binding to a specific model, browser, image, video, publishing, or analytics service; capabilities are discovered from the running environment
 - **Platform-native** — one topic shares facts and evidence, while titles, openings, structure, and calls to action are designed per platform
@@ -26,6 +26,7 @@ graph TD
     W --> V["short-video<br/>Short video"]
     W --> A["content-analytics<br/>Analytics"]
     W --> D["content-delivery<br/>Delivery"]
+    W --> G["wechat-daily<br/>WeChat daily"]
     W --> P["wechat-publisher<br/>WeChat publishing"]
     W --> T["toutiao-daily<br/>Toutiao daily"]
 ```
@@ -40,6 +41,7 @@ graph TD
 | [`self-media-short-video`](skills/self-media-short-video/SKILL.md) | Hooks, spoken script, storyboard, captions, and shoot plan |
 | [`self-media-content-analytics`](skills/self-media-content-analytics/SKILL.md) | Data quality, comparable baselines, attribution, decisions, and experiments |
 | [`self-media-content-delivery`](skills/self-media-content-delivery/SKILL.md) | Milestone files, versions, path verification, and publishing packages |
+| [`self-media-wechat-daily`](skills/self-media-wechat-daily/SKILL.md) | Daily WeChat topics, information-gain gates, low-creativity checks, publishing packages, and reviews |
 | [`self-media-wechat-publisher`](skills/self-media-wechat-publisher/SKILL.md) | WeChat formatting, image upload, draft creation, and image-message posts |
 | [`self-media-toutiao-daily`](skills/self-media-toutiao-daily/SKILL.md) | Daily Toutiao topics, duplicate checks, preflight, cold-start monitoring, and review |
 
@@ -49,7 +51,7 @@ graph TD
 
 **Claude Code (recommended, no Node.js required)**
 
-Run these two commands inside Claude Code to install all 10 skills at once:
+Run these two commands inside Claude Code to install all 11 skills at once:
 
 ```text
 /plugin marketplace add yanhua1010/self-media-content-workflow
@@ -64,7 +66,7 @@ Run these two commands inside Claude Code to install all 10 skills at once:
 Use the official [skills CLI](https://github.com/vercel-labs/skills) (requires Node.js):
 
 ```bash
-# Install all 10 skills into the current project
+# Install all 11 skills into the current project
 npx skills add yanhua1010/self-media-content-workflow
 
 # Install into the user-global skill directory
@@ -93,6 +95,8 @@ Use $self-media-content-strategy to build a topic pool and a one-month calendar 
 Use $self-media-trend-radar to research the most-asked questions about AI coding content in the last month.
 
 Use $self-media-content-analytics to review these 10 posts and identify the single next experiment.
+
+Use $self-media-wechat-daily to produce and validate today's WeChat publishing package.
 
 Use $self-media-toutiao-daily to produce and validate today's Toutiao publishing package.
 ```
@@ -133,7 +137,7 @@ The validator checks skill frontmatter, directory consistency, core-file length,
 ## Repository layout
 
 ```text
-skills/                   # 10 independently installable skills
+skills/                   # 11 independently installable skills
 ├── <skill>/SKILL.md      #   core workflow (≤ 500 lines)
 ├── <skill>/references/   #   detailed platform guidance
 └── <skill>/assets/       #   copyable output templates
@@ -144,7 +148,7 @@ scripts/validate.py       # repository validation
 
 ## Design decisions
 
-- One orchestrator owns routing and state; nine modules each own a single responsibility
+- One orchestrator owns routing and state; ten modules each own a single responsibility
 - Collection and publishing are runtime adapter layers, never vendor-bound
 - Platforms share facts and evidence while titles, openings, structure, and actions are rewritten per platform
 - Platform limits change; exact values defer to official documentation or the publishing interface
