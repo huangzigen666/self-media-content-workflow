@@ -45,6 +45,7 @@ description: 通用自媒体内容生产与经营工作流。用于自媒体内�
 | 单篇、周度或月度数据复盘 | `self-media-content-analytics` | 归因、决策和待验证实验 |
 | 保存、版本、发布包和归档 | `self-media-content-delivery` | 已核验文件和内容索引 |
 | 公众号排版、草稿箱写入、小绿书图片消息 | `self-media-wechat-publisher` | 已排版并核对的公众号草稿 |
+| 今日头条日更、时效稿、标题封面、冷启动和复盘 | `self-media-toutiao-daily` | 已校验头条发布包和复盘入口 |
 
 使用子 Skill 前完整读取其 `SKILL.md`。某个模块未安装时，按本 Skill 的同名阶段执行最小流程，不虚构不存在的能力。
 

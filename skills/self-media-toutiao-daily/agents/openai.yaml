@@ -1,0 +1,4 @@
+interface:
+  display_name: "头条号每日工作流"
+  short_description: "按头条推荐机制执行每日选题、写作、发布预检和数据复盘"
+  default_prompt: "Use $self-media-toutiao-daily to produce and validate today’s Toutiao content package."
